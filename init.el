@@ -5,12 +5,6 @@
 ;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
-(add-to-list 'load-path "~/.emacs.d/moe-theme.el/")
-(require 'moe-theme)
-
-(moe-dark)
-
-(ido-mode t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -18,7 +12,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (flycheck-rust company racer exec-path-from-shell rust-mode dumb-jump)))
+    (flycheck-rust company racer exec-path-from-shell moe-theme rust-mode dumb-jump)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -26,6 +20,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; Not sure this config works rn
+(require 'moe-theme)
+(moe-dark)
+
+(ido-mode t)
+
 
 (setq column-number-mode t)
 
